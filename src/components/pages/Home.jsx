@@ -1,9 +1,16 @@
+import Arrivals from "../layout/Arrivals"
+import Hero from "../layout/Hero"
+import HeroBottom from "../layout/HeroBottom"
+import Products from "../layout/Products"
 
 
 const Home = () => {
   return (
     <>
-    <h1>home</h1>
+    <Hero/>
+    <HeroBottom/>
+    <Products/>
+    <Arrivals/>
     </>
   )
 }

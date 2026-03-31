@@ -6,7 +6,7 @@ import { SlReload } from "react-icons/sl";
 
 const HeroBottom = () => {
   return (
-    <div className='bg-[#FFFFFF] py-5 text-black'>
+    <div className='bg-[#FFFFFF] border-b border-[#F0F0F0] -mt-2 py-5 text-black'>
         <Container>
             <Flex className={"justify-between items-center"}>
                 <div>

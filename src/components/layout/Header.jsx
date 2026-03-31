@@ -14,10 +14,10 @@ const Header = () => {
                 </div>
                 <div className='w-[60%] text-[#767676]'>
                     <ul className='flex items-center gap-x-10'>
-                        <li className='hover:text-black duration-300 font-normal hover:font-bold'><NavLink className={({isActive})=> isActive? `font-bold text-black`:``} to={'/home'}>Home</NavLink></li>
-                        <li className='hover:text-black duration-300 font-normal hover:font-bold'><NavLink className={({isActive})=> isActive? `font-bold text-black`:``} to={'/shop'}>Shop</NavLink></li>
-                        <li className='hover:text-black duration-300 font-normal hover:font-bold'><NavLink className={({isActive})=> isActive? `font-bold text-black`:``} to={'/about'}>About</NavLink></li>
-                        <li className='hover:text-black duration-300 font-normal hover:font-bold'><NavLink className={({isActive})=> isActive? `font-bold text-black`:``} to={'/contact'}>Contacts</NavLink></li>
+                        <li className='hover:text-black duration-300 font-semibold'><NavLink className={({isActive})=> isActive? `font-bold text-black`:``} to={'/home'}>Home</NavLink></li>
+                        <li className='hover:text-black duration-300 font-semibold'><NavLink className={({isActive})=> isActive? `font-bold text-black`:``} to={'/shop'}>Shop</NavLink></li>
+                        <li className='hover:text-black duration-300 font-semibold'><NavLink className={({isActive})=> isActive? `font-bold text-black`:``} to={'/about'}>About</NavLink></li>
+                        <li className='hover:text-black duration-300 font-semibold'><NavLink className={({isActive})=> isActive? `font-bold text-black`:``} to={'/contact'}>Contacts</NavLink></li>
                     </ul>
                 </div>
             </Flex>

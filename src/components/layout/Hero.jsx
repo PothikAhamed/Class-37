@@ -1,20 +1,22 @@
 import Container from '../common/Container'
 import Flex from '../common/Flex'
 import bg from '../../assets/slider-1 1.png'
+
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const Hero = () => {
   var settings = {
-    dots: true,
+    dots: false,
     infinite: true,
+    arrows: false,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1
   };
     return (
-    <Slider {...settings}>
+    <Slider {...settings} className='-mt-0.5'>
     <div>
       <div className="bg-[url(/src/assets/Intro.png)] h-150 bg-no-repeat bg-center"></div>
     </div>  

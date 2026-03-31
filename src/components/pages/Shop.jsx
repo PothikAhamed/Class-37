@@ -65,7 +65,7 @@ const Shop = () => {
                     <p className="text-[#767676]">$44.00</p>
                   </div>
                 </div>
-                <div className="w-70 text-black">
+                <div className="w-70 text-black relative group: z-0">
                   <img src={productWeigh} alt={productWeigh} />
                   <div className="flex items-center text-[14px] justify-between mt-5">
                     <p>Basic Crew Neck Tee</p>
