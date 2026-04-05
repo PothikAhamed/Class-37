@@ -6,31 +6,58 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const Hero = () => {
-  var settings = {
-    dots: false,
-    infinite: true,
-    arrows: false,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1
-  };
-    return (
-    <Slider {...settings} className='-mt-0.5'>
-    <div>
-      <div className="bg-[url(/src/assets/Intro.png)] h-150 bg-no-repeat bg-center"></div>
-    </div>  
-    <div>
-      <div className="bg-[url(/src/assets/Intro.png)] h-150 bg-no-repeat bg-center"></div>
-    </div>  
-    <div>
-      <div className="bg-[url(/src/assets/Intro.png)] h-150 bg-no-repeat bg-center"></div>
-    </div>  
-    <div>
-      <div className="bg-[url(/src/assets/Intro.png)] h-150 bg-no-repeat bg-center"></div>
-    </div>  
-    </Slider>
+import { HiOutlineArrowRight, HiOutlineArrowLeft } from "react-icons/hi";
+
+const NextArrow = ({ onClick }) => {
+  return (
+    <div
+      className="absolute right-5 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black text-white w-10 h-10 flex items-center justify-center rounded-full cursor-pointer"
+      onClick={onClick}
+    >
+      <HiOutlineArrowRight />
+    </div>
   );
+};
+
+const PrevArrow = ({ onClick }) => {
+  return (
+    <div
+      className="absolute left-5 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black text-white w-10 h-10 flex items-center justify-center rounded-full cursor-pointer"
+      onClick={onClick}
+    >
+      <HiOutlineArrowLeft />
+    </div>
+  );
+};
+
+const Hero = () => {
+var settings = {
+  dots: false,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  nextArrow: <NextArrow />,
+  prevArrow: <PrevArrow />,
+};
+return (
+  <div className="relative">
+    <Slider {...settings} className='-mt-0.5'>
+      <div>
+        <div className="bg-[url(/src/assets/Intro.png)] h-150 bg-no-repeat bg-center"></div>
+      </div>  
+      <div>
+        <div className="bg-[url(/src/assets/Intro.png)] h-150 bg-no-repeat bg-center"></div>
+      </div>  
+      <div>
+        <div className="bg-[url(/src/assets/Intro.png)] h-150 bg-no-repeat bg-center"></div>
+      </div>  
+      <div>
+        <div className="bg-[url(/src/assets/Intro.png)] h-150 bg-no-repeat bg-center"></div>
+      </div>  
+    </Slider>
+  </div>
+);
 };
     // <div id='heroSection' style={{backgroundImage: `url(${bg})`}} className=' py-35'>
     //   <Container>
