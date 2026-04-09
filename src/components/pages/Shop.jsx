@@ -14,7 +14,7 @@ import productNine from "../../assets/product-9.png";
 
 const Shop = () => {
   return (
-    <div className="py-[100px] bg-white">
+    <div className="py-25 bg-white">
       <Container>
         <div className="text-black pt-10 pb-30">
           <h1 className="text-5xl font-semibold">Products</h1>

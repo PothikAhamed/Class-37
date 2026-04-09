@@ -30,38 +30,42 @@ const ProductImage = () => {
     }
     alldata();
   }, []);
-
-  var settings = {
-    dots: false,
-    infinite: true,
-    speed: 2000,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 1000,
-    pauseOnHover: true,
-    cssEase: "linear",
-
-    // nextArrow: <NextArrow />,
-    // prevArrow: <PrevArrow />,
-  };
   const NextArrow = ({ onClick }) => {
   return (
     <div
-      className="absolute right-2 top-1/2 transform -translate-y-1/2 z-10 bg-black text-white w-8 h-8 flex items-center justify-center rounded-full cursor-pointer"
+      className="absolute right-5 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black text-white w-10 h-10 flex items-center justify-center rounded-full cursor-pointer"
       onClick={onClick}
-    >➡</div>
+    >
+      <HiOutlineArrowRight />
+    </div>
   );
 };
 
 const PrevArrow = ({ onClick }) => {
   return (
     <div
-      className="absolute left-2 top-1/2 transform -translate-y-1/2 z-10 bg-black text-white w-8 h-8 flex items-center justify-center rounded-full cursor-pointer"
+      className="absolute left-5 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black text-white w-10 h-10 flex items-center justify-center rounded-full cursor-pointer"
       onClick={onClick}
-    >⬅</div>
+    >
+      <HiOutlineArrowLeft />
+    </div>
   );
 };
+
+  var settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 1000,
+    pauseOnHover: true,
+    cssEase: "linear",
+  nextArrow: <NextArrow />,
+  prevArrow: <PrevArrow />,
+  };
+
 const getRandomBadge = () => {
   const badges = ["New", "Sale", "Hot", "-10%"];
   return badges[Math.floor(Math.random(1) * badges.length)];
